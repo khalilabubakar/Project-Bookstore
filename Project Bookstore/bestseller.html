@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bestseller</title>
+    <style media="screen">
+      *{
+        background-color:#FDF0D5;
+        margin:0;
+        box-sizing: border-box;
+      }
+
+      /*Design for Flex Container*/
+      .flex-container{
+        display:flex;
+        flex-direction: column;
+        width:1440px;
+      }
+
+      /*Design for Column 1(Nav Bar)*/
+      .flex-container > .column-1{
+        display:flex;
+        flex-direction:row;
+        height:85px;
+        width:1440px;
+        background-color:#780000;
+        position:fixed;
+        z-index:1;
+      }
+
+      .column-1 > .bookstore{
+        /* display:flex;
+        flex-direction:row; */
+        float:left;
+        padding: 18px 0px 18px 28px;
+        background-color:transparent;
+        font-size:40px;
+        color:white;
+        font-family:inter, arial, serif;
+      }
+      h1 strong{
+        background-color: transparent;
+      }
+      img{
+        background-color: transparent;
+      }
+      .column-1 > .nav-search{
+        /* display:flex;
+        flex-direction: row-reverse; */
+        background-color:#780000;
+        /* border:1px solid yellow; */
+        /* float:right; */
+        margin:21px 0px 21px 600px;
+        width:45px;
+        height:45px;
+      }
+      .column-1 > .nav-profile{
+        /* display:flex;
+        flex-direction: row-reverse; */
+        background-color:#780000;
+        /* border:1px solid yellow; */
+        /* float:right; */
+        margin:21px 0px 21px 48px;
+        width:45px;
+        height:45px;
+      }
+      .column-1 > .nav-cart{
+        /* display:flex;
+        flex-direction: row-reverse; */
+        background-color:#780000;
+        /* border:1px solid yellow; */
+        /* float:right; */
+        margin:21px 0px 21px 48px;
+        width:45px;
+        height:45px;
+      }
+
+      .column-1 > .nav-line{
+        /* display:flex;
+        flex-direction: row-reverse; */
+        background-color:white;
+        /* border:1px solid white; */
+        /* float:right; */
+        margin:21px 0px 21px 36px;
+        width:2px;
+        height:45px;
+      }
+      .column-1 > .nav-menu-bar{
+        /* display:flex;
+        flex-direction: row-reverse; */
+        background-color:#780000;
+        /* border:1px solid yellow; */
+        /* float:right; */
+        margin:10.5px 31px 10.5px 20px;
+        width:45px;
+        height:45px;
+      }
+
+      /*Blue line*/
+      .blue-line{
+      background-color:#002F49;
+      height:13px;
+      width:1440px;
+      position:fixed;
+      margin:85px 0px 0px 0px;
+      z-index:1;}
+
+      /*design for page trail*/
+      .page-trail{
+        display:flex;
+        flex-direction:row;
+        width:254px;
+        height:29px;
+        border:0px solid black;
+        margin: 102px 0px 0px 28px;
+      }
+
+      .breadcrumb{
+        list-style:none;
+      }
+
+      ul.breadcrumb li{
+        display:inline;
+        font-family:Inter, arial, serif;
+        font-size:15px;
+      }
+
+      ul.breadcrumb li+li:before{
+        padding:8px;
+        color:black;
+        content:">";
+      }
+
+      li a{
+        text-decoration:none;
+        color:black;
+      }
+
+      li a:hover{
+        text-decoration:underline;
+      }
+
+      /*bestseller heading*/
+      .bs-title{
+        border:0px solid black;
+        height:42px;
+        width:172px;
+        font-family:Inter, arial, serif;
+        font-size:35px;
+        margin:32px 0px 0px 368px;
+      }
+
+      /*column 2 design*/
+      .column-2{
+        display:flex;
+        flex-direction: row;
+      }
+
+      /*Grid Container*/
+      .bs-grid{
+        display:grid;
+        grid-template-columns:auto auto auto;
+        margin:6px 0px 70px 90px;
+        justify-content:start;
+        /* height:802px; */
+      }
+
+      /*list of books*/
+      .bs-grid > .grid-item{
+        border:1px solid grey;
+        padding:0px;
+        height:387.5px;
+        width:300px;
+        font-family:inter, arial, serif;
+        font-size:20px;
+        text-align: center;
+        padding:30px 0px 0px 0px;
+      }
+
+      .book-text{
+        width:254px;
+        height:36px;
+        margin:0px 27px 0px 27px;
+        border:0px solid black;
+        padding:0px;
+        text-align: center;
+      }
+
+      div a{
+        text-decoration:none;
+        color:black;
+        font-family:Inter, arial, serif;
+      }
+
+      div a:hover{
+        text-decoration: underline;
+      }
+
+      /*filter*/
+      .bs-filter{
+        width:250px;
+        height:300px;
+        border:1px solid grey;
+        margin:6px 0px 0px 28px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="flex-container">
+      <div class="column-1">
+            <h1 class="bookstore">
+              <strong>Kintan Bookstore</strong>
+            </h1>
+            <div class="nav-search">
+                <img src="img/search.png" alt="search" width=45px height=45px>
+                </img>
+            </div>
+            <div class="nav-profile">
+                <img src="img/user.png" alt="search" width=45px height=45px>
+            </div>
+            <div class="nav-cart">
+                <img src="img/cart.png" alt="search" width=45px height=45px>
+            </div>
+            <div class="nav-line">
+
+            </div>
+            <div class="nav-menu-bar">
+                <img src="img/menu.png" alt="search" width=67px height=67px>
+            </div>
+
+      </div>
+
+      <div class="blue-line">
+      </div>
+
+      <div class="page-trail">
+        <ul class="breadcrumb">
+          <li><a href="index.html"><strong>Home</strong></a></li>
+          <li><strong>Bestseller</strong></li>
+        </ul>
+      </div>
+
+      <div class="bs-title">
+        <strong>Bestseller</strong>
+      </div>
+
+      <div class="column-2">
+        <div class="bs-filter">
+          Filter
+        </div>
+
+        <!-- <div class="bs-grid-container"> -->
+        <div class="bs-grid">
+            <div class="grid-item">
+              <div class="item-1">
+                <a href="#"><img src="img/tafsir.jpg" alt="Tafsir Ibn Abbas" height="300px" width="200px"><div class="book-text">Tafsir Ibn 'Abbas</div></a>
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="item-1">
+                <a href="#"><img src="img/front-end.jpg" alt="Front-End" height="300px" width="200px"><div class="book-text">Modern Front-End Development for Rails</div></a>
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="item-1">
+                <a href="#"><img src="img/chemeng.jpg" alt="Chemical Engineering" height="300px" width="200px"><div class="book-text">Elements of Chemical Reaction Engineering</div></a>
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="item-1">
+                <a href="#"><img src="img/norway.jpg" alt="Norway" height="300px" width="200px"><div class="book-text">101 Amazing Things <br> To Do in Norway</div></a>
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="item-1">
+                <a href="#"><img src="img/warren.jpg" alt="Warren" height="300px" width="200px"><div class="book-text">Warren Buffett's <br> Ground Rules</div></a>
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="item-1">
+                <a href="#"><img src="img/three_kingdoms.jpg" alt="Three Kingdoms" height="300px" width="200px"><div class="book-text">Three Kingdoms</div></a>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+
+
+    </div>
+
+
+  </body>
+</html>
